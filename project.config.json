@@ -17,7 +17,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.5",
 	"appid": "wxbf8ec241224c9037",
-	"projectname": "blog",
+	"projectname": "blog2",
 	"isGameTourist": false,
 	"miniprogramRoot": "client/",
 	"cloudfunctionRoot": "cloud/functions/",

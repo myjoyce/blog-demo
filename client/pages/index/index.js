@@ -108,7 +108,7 @@ Page({
       console.log('调用成功', res)
       const result = res.result;
       const data = result.data || {};
-
+      
       if (result.code) {
         wx.showToast({
           title: result.msg,
@@ -118,7 +118,7 @@ Page({
       }
 
       // 跳转到详情
-      app.globalData.blog.detailId = data.id;
+      app.globalData.blog.id = data.id;
       wx.navigateTo({
         url: '../detail/index'
       });

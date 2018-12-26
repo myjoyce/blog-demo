@@ -16,7 +16,7 @@ exports.main = async (event, context) => {
 
   cloud.init();
   // 数据库引用
-  const db = cloud.database();
+  const db = cloud.database({});
   // 集合引用
   const collection = db.collection('blog');
 
@@ -31,7 +31,7 @@ exports.main = async (event, context) => {
   
   try {
     // 数据库引用
-    const db = cloud.database();
+    const db = cloud.database({});
     // 集合引用
     const collection = db.collection('blog');
     
@@ -51,12 +51,11 @@ exports.main = async (event, context) => {
     };
   }
 
-  console.log(result);
 
   return {
     code: 0,
     data: {
-      id: result.id
+      id: result._id
     }
   };
 };

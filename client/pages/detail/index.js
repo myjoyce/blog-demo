@@ -19,8 +19,9 @@ Page({
   getBlogDetail() {
     // 初始化db
     const db = wx.cloud.database({});
-    let blogId = app.globalData.blog.detailId;
+    let blogId = app.globalData.blog.id;
     db.collection('blog').doc(blogId).get().then(res => {
+        console.log(blogId);
         console.log('db读取成功', res.data);
         let data = res.data;
         this.setData({
